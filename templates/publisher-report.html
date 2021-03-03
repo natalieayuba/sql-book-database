@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Publisher Order Report &#8212; Book Wholesaler Databse System</title>
+    <link rel="icon" href="/static/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/static/stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Yantramanav" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script type="text/javascript" src="/static/script.js"></script>
+  </head>
+  <body>
+	<header>
+		<h1>Book Wholesaler Databse System</h1>
+	</header>
+	<section class="main">
+		<nav class="sidenav">
+			<a href="/" id="homebtn" title="Return to home"><i class="fas fa-home"></i></a>
+		</nav>
+		<span onclick="topFunction()" id="topbtn" title="Go to top">&#10514;</span>
+		<section id="report1" class="report">
+			<h2>Publisher Order Report</h2>
+			<hr>
+			<p>Order report of the books published by: <b><span id="publisher"></span></b>.</p>
+			<p><table>
+			  <tr>
+				<th>Book ID</th>
+				<th>Book Title</th>
+				<th>Total No. of Orders</th>
+				<th>Total Quantity</th>
+				<th>Total Selling Value</th>
+			  </tr>
+			  {% for row in rows %}
+				  <tr>
+					{% for item in row%}
+					  <td>{{item}}</td>
+					{% endfor %}
+				  </tr>
+			  {% endfor %}
+			</p></table>
+		</section>
+	</section>
+	<footer>
+		<p>&copy; Copyright 2019 Book Wholesaler Database System</p>
+	</footer>
+  </body>

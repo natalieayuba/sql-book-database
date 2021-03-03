@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Task 3 &#8212; Book Wholesaler Databse System</title>
+    <link rel="icon" href="/static/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/static/stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Yantramanav" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script type="text/javascript" src="/static/script.js"></script>
+  </head>
+  <body>
+	<header>
+		<h1><a href="/">Book Wholesaler Databse System</a></h1>
+	</header>
+	<section class="main">
+		<nav class="sidenav">
+			<h3 align="center"><i class="fas fa-bars"></i>&nbsp;&nbsp;Menu</h3>
+			<ul>
+			  <li><a class="navbtn" href="/">Home</a></li>
+			  <li><a class="navbtn" href="/task-1-form">Create New Category</a></li>
+			  <li><a class="navbtn" href="/task-2-form">Delete Category</a></li>
+			  <li><a class="active" href="/task-3-form">Category Summary Report</a></li>
+			  <li><a class="navbtn" href="/task-4-form">Publisher Ordered Books Report</a></li>
+			  <li><a class="navbtn" href="/task-5-form">Book Order History</a></li>
+			  <li><a class="navbtn" href="/task-6-form">Sales Rep Performance Report</a></li>
+			  <li><a class="navbtn" href="/task-7-form">Apply Category Discount</a></li>
+			</ul>	
+		</nav>
+		<span onclick="topFunction()" id="topbtn" title="Go to top">&#10514;</span>
+		<section class="taskform">
+			<h2>Category Summary Report</h2>
+			<hr>
+			<p>To view a summary report of books available in each category, please click the button below.</p>
+			<form class="form" action="categoryReport" method="get">
+				<p><input type="submit" value="View Report"></p>
+			</form>
+			{{msg3}}
+			<br>{{error3}}
+		</section>
+	</section>
+	<footer>
+		<p>&copy; Copyright 2019 Book Wholesaler Database System</p>
+	</footer>
+  </body>
